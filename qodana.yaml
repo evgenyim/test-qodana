@@ -1,0 +1,15 @@
+version: "1.0"
+
+#Specify inspection profile for code analysis
+profile:
+    name: Default
+    
+#Enable inspections
+#include:
+#  - name: SomeEnabledInspectionId
+
+#Disable inspections
+#exclude:
+#  - name: SomeDisabledInspectionId
+#    paths:
+#      - path/where/not/run/inspection
