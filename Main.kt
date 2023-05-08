@@ -4,4 +4,5 @@ fun main() {
     val c = a + b + b
     println("Tesst2")
     println(c)
+    val d: Int
 }
