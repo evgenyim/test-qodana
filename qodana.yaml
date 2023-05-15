@@ -3,6 +3,8 @@ version: "1.0"
 #Specify inspection profile for code analysis
 profile:
     name: Default
+
+projectJDK: 17
     
 #Enable inspections
 #include:

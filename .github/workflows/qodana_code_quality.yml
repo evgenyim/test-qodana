@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-      - 'releases/*'
+      - test
 
 jobs:
   qodana:
@@ -16,5 +16,3 @@ jobs:
           fetch-depth: 0
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2022.3.4
-        with:
-          args: --results-dir=./qodanass
