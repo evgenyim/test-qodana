@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.qodana
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -39,6 +40,16 @@ object Build : BuildType({
 
     vcs {
         root(HttpsGithubComEvgenyimTestQodanaGitRefsHeadsMain)
+    }
+
+    steps {
+        qodana {
+            name = "Qodana Step"
+            reportAsTests = true
+            linter = jvm {
+            }
+            additionalDockerArguments = "-e QODANA_TOKEN=%env.QODANA_TOKEN%"
+        }
     }
 
     triggers {
