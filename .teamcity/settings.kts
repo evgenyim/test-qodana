@@ -38,6 +38,10 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    params {
+        param("env.QODANA_TOKEN", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdhbml6YXRpb24iOiJ6TXJrSiIsInByb2plY3QiOiIzeTdhbSIsInRva2VuIjoiM0piVlkifQ.0p_dCf1RzD0jt8F0YCV2DZAfSbo-nOgk-i3h-wIyNRM")
+    }
+
     vcs {
         root(HttpsGithubComEvgenyimTestQodanaGitRefsHeadsMain)
     }
