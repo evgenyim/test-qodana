@@ -52,7 +52,7 @@ object Build : BuildType({
             reportAsTests = true
             linter = jvm {
             }
-            additionalDockerArguments = "-e QODANA_TOKEN=%env.QODANA_TOKE%"
+            additionalDockerArguments = "-e QODANA_TOKEN=%env.QODANA_TOKEN%"
         }
     }
 
