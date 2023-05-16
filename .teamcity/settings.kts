@@ -30,7 +30,7 @@ version = "2022.10"
 
 project {
 
-    vcsRoot(HttpsGithubComEvgenyimTestQodanaGitRefsHeadsMain)
+    vcsRoot(TestVcsRoot)
 
     buildType(Build)
 }
@@ -43,14 +43,14 @@ object Build : BuildType({
     }
 
     vcs {
-        root(HttpsGithubComEvgenyimTestQodanaGitRefsHeadsMain)
+        root(TestVcsRoot)
     }
 
     steps {
         qodana {
             name = "Qodana Step"
             reportAsTests = true
-            linter = jvm {
+            linter = jvmCommunity {
             }
             additionalDockerArguments = "-e QODANA_TOKEN=%env.QODANA_TOKEN%"
         }
@@ -67,9 +67,12 @@ object Build : BuildType({
     }
 })
 
-object HttpsGithubComEvgenyimTestQodanaGitRefsHeadsMain : GitVcsRoot({
+object TestVcsRoot : GitVcsRoot({
     name = "https://github.com/evgenyim/test-qodana.git#refs/heads/main"
     url = "https://github.com/evgenyim/test-qodana.git"
     branch = "refs/heads/main"
-    branchSpec = "refs/heads/*"
+    branchSpec = """
+        refs/heads/test
+        refs/heads/another
+    """.trimIndent()
 })
