@@ -1,5 +1,7 @@
 version: "1.0"
 
+bootstrap: sh ./check.shs
+
 #Specify inspection profile for code analysis
 profile:
     name: Default
