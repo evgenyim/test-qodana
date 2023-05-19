@@ -1,0 +1,1 @@
+echo $QODANA_TOKEN
