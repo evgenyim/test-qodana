@@ -1,1 +1,1 @@
-echo $QODANA_TOKEN
+echo a$QODANA_TOKENb
