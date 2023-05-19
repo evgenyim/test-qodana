@@ -1,6 +1,6 @@
 version: "1.0"
 
-bootstrap: sh ./check.shs
+bootstrap: sh ./check.sh
 
 #Specify inspection profile for code analysis
 profile:
