@@ -52,7 +52,7 @@ object Build : BuildType({
             reportAsTests = true
             linter = jvmCommunity {
             }
-            additionalDockerArguments = "-e QODANA_TOKEN=%env.QODANA_TOKEN%"
+            cloudToken = "credentialsJSON:6b9ed493-6b74-42ee-abec-155a64c726e4"
         }
     }
 
