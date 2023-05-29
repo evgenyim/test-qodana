@@ -38,10 +38,6 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    params {
-        password("env.QODANA_TOKEN", "credentialsJSON:6b9ed493-6b74-42ee-abec-155a64c726e4")
-    }
-
     vcs {
         root(TestVcsRoot)
     }
