@@ -48,7 +48,7 @@ object Build : BuildType({
             reportAsTests = true
             linter = jvmCommunity {
             }
-            cloudToken = "credentialsJSON:6b9ed493-6b74-42ee-abec-155a64c726e4"
+            cloudToken = "credentialsJSON:a24fbb87-a029-4176-8e41-56d05f2d4748"
         }
     }
 
