@@ -1,7 +1,7 @@
 pipeline {
-    environment {
-        QODANA_TOKEN=credentials('qodana-token')
-    }
+   environment {
+       QODANA_TOKEN=credentials('qodana-token')
+   }
    agent {
       docker {
          args '''
