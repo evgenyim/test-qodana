@@ -8,7 +8,7 @@ pipeline {
               -v "${WORKSPACE}":/data/project
               --entrypoint=""
               '''
-         image 'jetbrains/qodana-jvm'
+         image 'jetbrains/qodana-jvm-community'
       }
    }
    stages {
