@@ -17,6 +17,7 @@ pipeline {
             branch 'main'
          }
          steps {
+            sh "printenv"
             sh '''
                qodana --save-report --results-dir=/data/project
                '''
