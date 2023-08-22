@@ -18,7 +18,7 @@ pipeline {
          }
          steps {
             sh '''
-               qodana
+               qodana --save-report --results-dir=/data/project
                '''
          }
       }
