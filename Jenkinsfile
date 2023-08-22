@@ -18,7 +18,6 @@ pipeline {
          }
          steps {
             sh '''
-               QODANA_BRANCH='main'
                qodana --save-report --results-dir=/data/project
                '''
          }
