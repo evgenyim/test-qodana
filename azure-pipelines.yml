@@ -7,7 +7,7 @@ trigger:
 
 pool:
   name: test-agent-azure
-  vmImage: ubuntu-latest
+  # vmImage: ubuntu-latest
 
 steps:
   - task: Cache@2  # Not required, but Qodana will open projects with cache faster.
