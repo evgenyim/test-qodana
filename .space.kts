@@ -1,14 +1,14 @@
 job("Qodana") {
   startOn {
     gitPush {
-      branchFilter {
+      anyBranchMatching {
         +"refs/heads/main"
       }
     }
     codeReviewOpened{}
   }
   container("jetbrains/qodana-jvm") {
-    env["QODANA_TOKEN"] = Secrets("qodana-token")
+    env["QODANA_TOKEN"] = {{ project:qodana-token }}
     shellScript {
       content = """
                qodana
