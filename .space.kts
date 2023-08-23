@@ -1,7 +1,7 @@
 job("Qodana") {
   startOn {
     gitPush {
-      branchFilter {
+      anyBranchMatching {
         +"refs/heads/main"
       }
     }
