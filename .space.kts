@@ -11,8 +11,7 @@ job("Qodana") {
     env["QODANA_TOKEN"] = Secrets("qodana-token")
     shellScript {
       content = """
-        qodana \
-        --profile-name qodana.recommended
+        qodana
         """.trimIndent()
     }
   }
