@@ -6,6 +6,7 @@ trigger:
   - main
 
 pool:
+  name: test-agent-azure
   vmImage: ubuntu-latest
 
 steps:
