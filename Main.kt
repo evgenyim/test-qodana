@@ -5,5 +5,4 @@ fun main() {
     println("Tesst2")
     println(c)
     val d: Int
-
 }
