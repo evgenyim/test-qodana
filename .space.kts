@@ -2,7 +2,7 @@ job("Qodana") {
   startOn {
     gitPush {
       anyBranchMatching {
-        + "refs/heads/main"
+        + "main"
       }
     }
     codeReviewOpened{}
