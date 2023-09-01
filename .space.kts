@@ -3,6 +3,7 @@ job("Qodana") {
     gitPush {
       anyBranchMatching {
         + "main"
+        + "test"
       }
     }
     codeReviewOpened{}
