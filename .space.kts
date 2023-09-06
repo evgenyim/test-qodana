@@ -9,7 +9,7 @@ job("Qodana") {
     codeReviewOpened{}
   }
   container("jetbrains/qodana-jvm") {
-    env["QODANA_TOKEN"] = "{{ project:secret }}"
+    env["QODANA_TOKEN"] = "{{ project:qodana-token }}"
     shellScript {
       content = "qodana --baseline qodana.sarif.json"
     }
