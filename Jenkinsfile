@@ -18,6 +18,7 @@ pipeline {
                 branch 'main'
             }
             steps {
+                sh '''printenv'''
                 sh '''qodana'''
             }
         }
