@@ -11,6 +11,7 @@ profile:
 bootstrap: |
   git log -1
   ls -al
+  cat qodana.yaml
 #Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
