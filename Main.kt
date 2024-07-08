@@ -8,4 +8,7 @@ fun main() {
     while (c == 5) {
 
     }
+    while (b == 2) {
+
+    }
 }
