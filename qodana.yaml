@@ -10,6 +10,7 @@ profile:
 
 bootstrap: |
   git log -1
+  ls -al
 #Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
