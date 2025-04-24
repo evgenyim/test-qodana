@@ -6,6 +6,5 @@ fun main() {
     println(c)
     val d = 10
     while (c == 5) {
-        println(c++)
     }
 }
