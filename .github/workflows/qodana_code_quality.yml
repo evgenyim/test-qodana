@@ -26,5 +26,6 @@ jobs:
 #          args: --apply-fixes
 #          push-fixes: pull-request
           pr-mode: false
+          use-caches: false
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
