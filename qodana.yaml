@@ -19,7 +19,8 @@ profile:
 #    paths:
 #      - out
 ##      - .idea
-#include:
+include:
+  - name: UnusedSymbol
 #  - name: UseExpressionBody
 #  - name: ExpressionComparedToItself
 #    paths:
