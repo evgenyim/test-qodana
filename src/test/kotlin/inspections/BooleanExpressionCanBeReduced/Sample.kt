@@ -25,6 +25,7 @@ object SampleBooleanReduction {
 
     fun andWithTrue(b: Boolean): Boolean {
         // Expect: Expression can be reduced to 'b'
+        val a = b && false
         return true && b
     }
 
