@@ -23,3 +23,23 @@ object SampleEmptyControlFlowBody {
         }
     }
 }
+
+
+object HardCasesEmptyControlFlowBody {
+    fun more(cond: Boolean) {
+        // Expect: Empty if body
+        if (cond) { /* no-op */ }
+
+        // Expect: Empty while body
+        while (false) { /* nothing */ }
+
+        // Expect: Empty for body
+        for (i in 0..0) { ; }
+
+        // Expect: Empty when branches
+        when (cond) {
+            true -> { }
+            false -> { }
+        }
+    }
+}

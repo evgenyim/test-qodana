@@ -17,3 +17,18 @@ object SampleSafeCastWithReturn {
         println((x as String).length)
     }
 }
+
+
+object HardCasesSafeCastWithReturn {
+    fun takeNumber(x: Any?) {
+        // Expect: Safe cast expression with return can be replaced with type check using 'if' statement
+        x as? Number ?: return
+        println((x as Number).toLong())
+    }
+
+    fun labeledReturn(x: Any?): Int {
+        // Expect: Safe cast expression with return can be replaced with type check using 'if' statement
+        (x as? String) ?: return -1
+        return (x as String).length
+    }
+}

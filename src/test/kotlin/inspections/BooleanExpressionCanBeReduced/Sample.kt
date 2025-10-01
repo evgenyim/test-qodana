@@ -44,3 +44,31 @@ object SampleBooleanReduction {
         return false || e
     }
 }
+
+
+object HardCasesBooleanReduction {
+    fun nullableElvisEqTrue(x: Boolean?): Boolean {
+        // Expect: Expression can be reduced to 'x == true'
+        return (x ?: false) == true
+    }
+
+    fun redundantParentheses(a: Boolean, b: Boolean): Boolean {
+        // Expect: Expression can be reduced to 'a || b'
+        return (((a || b)) == true)
+    }
+
+    fun mixedAndOr(a: Boolean, b: Boolean): Boolean {
+        // Expect: Expression can be reduced to 'a && b'
+        return (a && b) == true
+    }
+
+    fun orWithFalseChain(a: Boolean, b: Boolean, c: Boolean): Boolean {
+        // Expect: Expression can be reduced to 'a || b || c'
+        return false || (a || false) || (b || false) || (c || false)
+    }
+
+    fun andWithTrueChain(a: Boolean, b: Boolean, c: Boolean): Boolean {
+        // Expect: Expression can be reduced to 'a && b && c'
+        return true && (a && true) && (b && true) && (c && true)
+    }
+}

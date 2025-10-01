@@ -25,3 +25,29 @@ object SampleSimplifiableIf {
         return if (cond) true else false
     }
 }
+
+
+object HardCasesSimplifiableIf {
+    fun sameReturnValue(cond: Boolean, v: Int): Int {
+        // Expect: If statement can be simplified to 'return v'
+        if (cond) {
+            return v
+        } else {
+            return v
+        }
+    }
+
+    fun earlyReturn(cond: Boolean): Boolean {
+        // Expect: If statement can be simplified to 'return cond'
+        if (cond) return true else return false
+    }
+
+    fun negated(cond: Boolean): Boolean {
+        // Expect: If statement can be simplified to 'return !cond'
+        if (!cond) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
