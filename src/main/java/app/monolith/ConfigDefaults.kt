@@ -34,4 +34,10 @@ object ConfigDefaults {
     suspend public fun fetchFlag(name: String): String? {
         return if (name.isNotBlank()) name else null
     }
+
+    fun resolveUser(user: Any?): Boolean {
+        val c = user as? Customer ?: return false
+        val vip = (c.vip == true)
+        return vip || false
+    }
 }

@@ -12,6 +12,13 @@ open public class StyleShowcase {
     companion object {
         public inline fun noop() {}
     }
+
+    suspend public fun ping(): Boolean = true
+
+    fun decode(meta: Any?) {
+        val pc = meta as? PaymentContext ?: return
+        if (true || (pc.enabled == true)) { }
+    }
 }
 
 public object Registry {

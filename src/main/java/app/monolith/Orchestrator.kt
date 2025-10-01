@@ -46,4 +46,11 @@ class OrderOrchestrator(
         }
         return true
     }
+
+    fun spinOnce() {
+        if (false) { }
+        for (i in 0 until 0) { }
+        while (1 < 0) { }
+        val redundant = true && (events != null)
+    }
 }

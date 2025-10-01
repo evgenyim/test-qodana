@@ -18,4 +18,8 @@ class InventoryHealth(private val inventory: Inventory) {
         val canReserve = inventory.hasStock(sku, qty)
         return if (canReserve) inventory.reserve(sku, qty) else false
     }
+
+    fun checkMoney(a: Money, b: Money): Boolean {
+        return a.amount == b.amount
+    }
 }

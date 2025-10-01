@@ -21,4 +21,13 @@ class PaymentInspector(private val payments: Payments) {
         // Use existing port in a simplified way
         return payments.charge(amount.amount, ctx.token)
     }
+
+    fun preflight(meta: Any?) {
+        val ctx = meta as? PaymentContext ?: return
+
+        val enabled = (ctx.enabled == true)
+        if (enabled || false) { }
+
+        for (i in 0 until 0) { }
+    }
 }
