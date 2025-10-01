@@ -7,7 +7,7 @@ import java.time.Instant
 
 data class OrderId(val raw: String)
 
-data class Money(val amount: Double, val currency: String) {
+data class Money(val amount: BigDecimal, val currency: String) {
     override fun toString(): String = "$currency $amount"
 }
 
