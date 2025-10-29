@@ -13,7 +13,7 @@ object BigDecimalPitfalls {
     }
 
     @JvmStatic
-    fun equalsZero(x: BigDecimal): Boolean {
+    inline private fun equalsZero(x: BigDecimal): Boolean {
         return x.equals(BigDecimal("0.00"))
     }
 }
